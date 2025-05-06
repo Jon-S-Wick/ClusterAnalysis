@@ -11,7 +11,7 @@ def iter(file, dir):
         else:
             line = (
                 '\n<li><a href="'
-                + dir
+                + dir.split("docs//")[-1]
                 + "/"
                 + i
                 + '">'
