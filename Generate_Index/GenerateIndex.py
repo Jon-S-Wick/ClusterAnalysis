@@ -3,20 +3,22 @@ from os.path import isdir
 
 
 def iter(file, dir):
-    for i in os.listdir("../docs"):
+    for i in os.listdir(dir):
         if i == "index.html":
             continue
         if os.path.isdir(dir + "/" + i):
             iter(file, dir + "/" + i)
         else:
             line = (
-                '<li>            <a href="'
+                '\n<li><a href="'
                 + dir
-                + '"'
+                + "/"
                 + i
                 + '">'
+                + dir.split("docs//")[-1]
+                + "/"
                 + i.split(".")[0]
-                + "</a> </li>"
+                + "</a> </li>\n"
             )
             file.write(line)
 
