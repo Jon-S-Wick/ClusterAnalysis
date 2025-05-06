@@ -27,7 +27,3 @@
   <body>
     <h1>Available HTML Tables</h1>
     <ul>
-<li>            <a href="../docs//20250505RealventBroad"20250505RealventBroad">20250505RealventBroad</a> </li><li>            <a href="../docs//20250505RealventBroad"20250505RealventNarrow">20250505RealventNarrow</a> </li><li>            <a href="../docs//20250505RealventNarrow"20250505RealventBroad">20250505RealventBroad</a> </li><li>            <a href="../docs//20250505RealventNarrow"20250505RealventNarrow">20250505RealventNarrow</a> </li>
-    </ul>
-  </body>
-</html>
