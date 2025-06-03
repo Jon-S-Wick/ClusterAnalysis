@@ -4,13 +4,22 @@ from os.path import isdir
 
 def iter(file, dir):
     for i in os.listdir(dir):
+        counter = 1
         if i == "index.html":
             continue
         if os.path.isdir(dir + "/" + i):
+            line = (
+                "<ul>" * counter + i +"</ul> "* counter
+            )
+            print(line + " Counter=" + str(counter))
+            file.write(line)
             iter(file, dir + "/" + i)
+            counter += 1
         else:
             line = (
-                '\n<li><a href="'
+                '\n'
+                + '<ul>' * (counter + 1 )
+                + '<li><a href="'
                 + dir.split("docs//")[-1]
                 + "/"
                 + i
@@ -19,6 +28,7 @@ def iter(file, dir):
                 + "/"
                 + i.split(".")[0]
                 + "</a> </li>\n"
+                + '</ul>' * (counter + 1)
             )
             file.write(line)
 
